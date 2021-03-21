@@ -36,8 +36,8 @@ public class PrimeNumber {
                 fileWriter.write("Exit program\n");
                 exit = true;
             } else if (!input.matches("[0-9]+")){
-                System.out.println(input+" is not number. Please input number again");
-                fileWriter.write(input +" is not number. Please input number again\n");
+                System.out.println(input+" is not positive integer number. Please input number again");
+                fileWriter.write(input +" is not positive integer number. Please input number again\n");
             } else {
                 int number = Integer.parseInt(input);
                 if (isPrimeNumber(number)) {
