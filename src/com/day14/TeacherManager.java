@@ -20,7 +20,7 @@ public class TeacherManager extends PersonManager {
 
     public void findMaxSalary(List<Teacher> list) {
         double maxSalary = list.stream()
-                .max(Comparator.comparing(Teacher::getSalary))
+                .max(Comparator.comparingDouble(Teacher::getSalary))
                 .get()
                 .getSalary();
         List<Teacher> teacherList = list.stream()
