@@ -13,7 +13,7 @@ public class RandomNumber {
         do {
             System.out.printf("Input number with %d < number < %d: ", min, max);
             String input = scanner.nextLine();
-            if (!input.matches("[0-9]+")) {
+            if (!input.matches("^-?\\d+$")) {
                 System.out.println("You should input integer number! Please try again!");
             } else {
                 n = Integer.parseInt(input);

@@ -17,7 +17,7 @@ public class TestArrayList {
             if (input.toLowerCase().equals("q") || input.toUpperCase().equals("Q")) {
                 System.out.println("Exit program!");
                 exit = true;
-            } else if (input.matches("[0-9]+")) {
+            } else if (input.matches("^-?\\d+$")) {
                 integerArrayList.add(Integer.parseInt(input));
             }
         } while (!exit);
