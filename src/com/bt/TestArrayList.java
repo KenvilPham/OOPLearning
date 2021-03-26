@@ -14,10 +14,10 @@ public class TestArrayList {
         do {
             System.out.println("Input character from keyboard: ");
             String input = scanner.nextLine();
-            if (input.toLowerCase().equals("q") || input.toUpperCase().equals("Q")) {
+            if (input.toLowerCase().equals("q")) {
                 System.out.println("Exit program!");
                 exit = true;
-            } else if (input.matches("^-?\\d+$")) {
+            } else if (input.matches("^[-+]?\\d+$")) {
                 integerArrayList.add(Integer.parseInt(input));
             }
         } while (!exit);

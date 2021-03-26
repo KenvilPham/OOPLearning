@@ -62,18 +62,18 @@ public class RandomNumber {
     }
     public static void findTwoNumber(int[] arr, int x) {
         Arrays.sort(arr);
-        int closestSum = findClosestSum(arr, x);
-        System.out.println("Closest is: " + closestSum);
+        x = findClosestSum(arr, x);
+        System.out.println("Closest is: " + x);
 
         int left = 0;
         int right = arr.length - 1;
         while (left < right) {
             int sum = arr[left] + arr[right];
-            if (sum == closestSum) {
+            if (sum == x) {
                 System.out.printf("Two number is: %d & %d", arr[left], arr[right]);
                 System.out.println();
             }
-            if (sum > closestSum) {
+            if (sum > x) {
                 right--;
             } else {
                 left++;
@@ -84,6 +84,7 @@ public class RandomNumber {
     public static void main(String[] args) {
         System.out.println("--------Input array number--------");
         int[] arr = generateRandom();
+        //int[] test = {-8, -4, -6, -2, 0, 2, 4, 6, 8};
         System.out.println("--------Input number to check--------");
         int checkNumber = inputNumber(-11, 11);
         findTwoNumber(arr, checkNumber);
